@@ -1,0 +1,94 @@
+/*ALL CSS ER LAGET AV CLAUDE!!!!!!!!!!*/
+
+@keyframes regnbue {
+  0%   { background-color: #ffb3ba; }
+  16%  { background-color: #ffdfba; }
+  33%  { background-color: #ffffba; }
+  50%  { background-color: #baffc9; }
+  66%  { background-color: #bae1ff; }
+  83%  { background-color: #e8baff; }
+  100% { background-color: #ffb3ba; }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  animation: regnbue 8s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: #3a3a3a;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8b5cf6;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #d946a8;
+}
+
+section, div.seksjon {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.45rem 0.75rem;
+  border: 1.5px solid #c4b5fd;
+  border-radius: 8px;
+  font-size: 15px;
+  background: rgba(255,255,255,0.8);
+  color: #3a3a3a;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #8b5cf6;
+}
+
+button {
+  padding: 0.45rem 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #c084fc;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #a855f7;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+p {
+  margin-top: 0.75rem;
+  color: #4b4b6b;
+  font-size: 15px;
+}
