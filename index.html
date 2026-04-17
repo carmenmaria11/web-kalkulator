@@ -8,4 +8,53 @@
     </p>
 </div>
 
-<script type="module" src="fakultet.js"></script>
+<div id="fizzbuzz">
+    <form>
+        <input name="tall" placeholder="Tall" type="number">
+        <button>Sjekk FizzBuzz</button>
+    </form>
+    <p>
+        Resultatet er: <span class="resultat"></span>
+    </p>
+</div>
+
+<div id="fibonacci">
+    <form>
+        <input name="tall" placeholder="Tall" type="number">
+        <button>Finn fibonacci-tall</button>
+    </form>
+    <p>
+        Resultatet er: <span class="resultat"></span>
+    </p>
+</div>
+
+<script type="module">
+    import { fakultet } from './fakultet.js';
+    import { fizzBuzz } from './fizzbuzz.js';
+    import { fibonacci } from './fibonacci.js';
+
+    function regnUt(evt) {
+        evt.preventDefault();
+        const input = document.querySelector('#fakultet input');
+        const output = document.querySelector('#fakultet .resultat');
+        output.textContent = fakultet(parseInt(input.value));
+    }
+
+    function sjekkFizzBuzz(evt) {
+        evt.preventDefault();
+        const input = document.querySelector('#fizzbuzz input');
+        const output = document.querySelector('#fizzbuzz .resultat');
+        output.textContent = fizzBuzz(parseInt(input.value));
+    }
+
+    function finnFibonacci(evt) {
+        evt.preventDefault();
+        const input = document.querySelector('#fibonacci input');
+        const output = document.querySelector('#fibonacci .resultat');
+        output.textContent = fibonacci(parseInt(input.value));
+    }
+
+    document.querySelector('#fakultet button').addEventListener('click', e => regnUt(e));
+    document.querySelector('#fizzbuzz button').addEventListener('click', e => sjekkFizzBuzz(e));
+    document.querySelector('#fibonacci button').addEventListener('click', e => finnFibonacci(e));
+</script>
